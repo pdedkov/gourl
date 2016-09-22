@@ -1,6 +1,7 @@
 package gourl
 
 import (
+	"errors"
 	"fmt"
 	"net"
 	"net/url"
@@ -10,14 +11,26 @@ import (
 )
 
 // IsSameHost check is source and url host same host
-func IsSameHost(source, loc string, www bool) (bool, error) {
-	parsed, err := url.Parse(loc)
+func IsSameHost(loc, source string, www bool) (bool, error) {
+	if len(loc) == 0 {
+		return false, errors.New("Empty location url")
+	}
+
+	// test is abs url
+	if string(loc[0]) == "/" || string(loc[0]) == "#" {
+		return true, nil
+	}
+
+	loc = AddHTTP(loc)
+	source = AddHTTP(source)
+
+	_, err := url.Parse(loc)
 
 	if err != nil {
 		return false, err
 	}
 
-	if !parsed.IsAbs() {
+	if h, err := GetHost(loc, true, false); err != nil || len(h) == 0 {
 		return true, nil
 	}
 	source, err = GetHost(source, www, false)

@@ -8,15 +8,17 @@ type testpair struct {
 }
 
 var testsSame = []testpair{
+	{"/glossary.php?letter=%D0", "http://www.faito.ru/"},
+	{"http://www.faito.ru", "http://www.faito.ru"},
 	{"http://mail.ru:8080", "https://mail.ru"},
 	{"http://mail.ru", "https://www.mail.ru"},
 	{"http://mail.ru", "mail.ru"},
 	{"www.mail.ru", "mail.ru"},
-	{"lo.ru", "ya.ru"},
 }
 
 var testsDiff = []testpair{
 	{"http://lo.ru:8080", "http://ya.ru:80"},
+	{"lo.ru", "ya.ru"},
 }
 
 var testsHost = []testpair{
