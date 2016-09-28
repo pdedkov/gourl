@@ -17,7 +17,7 @@ func IsSameHost(loc, source string, www bool) (bool, error) {
 	}
 
 	// test is abs url
-	if string(loc[0]) == "/" || string(loc[0]) == "#" {
+	if string(loc[0]) == "/" || string(loc[0]) == "#" || string(loc[0]) == "." {
 		return true, nil
 	}
 

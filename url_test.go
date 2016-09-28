@@ -8,6 +8,7 @@ type testpair struct {
 }
 
 var testsSame = []testpair{
+	{"../clients/clients.htm", "http://www.ining.ru"},
 	{"/glossary.php?letter=%D0", "http://www.faito.ru/"},
 	{"http://www.faito.ru", "http://www.faito.ru"},
 	{"http://mail.ru:8080", "https://mail.ru"},
