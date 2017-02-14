@@ -1,0 +1,5 @@
+package: github.com/pdedkov/gourl
+import:
+- package: golang.org/x/net
+  subpackages:
+  - idna
