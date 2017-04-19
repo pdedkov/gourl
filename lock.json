@@ -1,0 +1,22 @@
+{
+    "memo": "",
+    "projects": [
+        {
+            "name": "golang.org/x/net",
+            "branch": "master",
+            "revision": "5602c733f70afc6dcec6766be0d5034d4c4f14de",
+            "packages": [
+                "idna"
+            ]
+        },
+        {
+            "name": "golang.org/x/text",
+            "branch": "master",
+            "revision": "f4b4367115ec2de254587813edaa901bc1c723a8",
+            "packages": [
+                "secure/bidirule",
+                "unicode/norm"
+            ]
+        }
+    ]
+}
