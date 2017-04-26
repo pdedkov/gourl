@@ -1,0 +1,13 @@
+memo = ""
+
+[[projects]]
+  branch = "master"
+  name = "golang.org/x/net"
+  packages = ["idna"]
+  revision = "da118f7b8e5954f39d0d2130ab35d4bf0e3cb344"
+
+[[projects]]
+  branch = "master"
+  name = "golang.org/x/text"
+  packages = ["secure/bidirule","unicode/norm"]
+  revision = "a9a820217f98f7c8a207ec1e45a874e1fe12c478"
