@@ -1,8 +1,0 @@
-hash: 0db097f28b2ef467c5e593e265ed652631f59bed5ca50e2707bbf06db0388eea
-updated: 2017-02-14T14:34:08.144371901+03:00
-imports:
-- name: golang.org/x/net
-  version: f09c4662a0bd6bd8943ac7b4931e185df9471da4
-  subpackages:
-  - idna
-testImports: []
